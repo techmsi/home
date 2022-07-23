@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&display=swap');
+
+:root {
+  --base-font: 'Recursive', monospace;
+  --base-color: #242424;
+  --base-font-size: 1.2rem;
+  --heading-font-size: 2.5rem;
+  --icon-size: 3.5rem;
+  --icon-lg-size: 5rem;
+  --link-color: #f7df1e;
+  --link-font-size: 1.8rem;
+  --shadow-color: rgb(196, 197, 198);
+  --grad-1: rgba(35, 56, 61, 0.621) 35%;
+  --grad-2: rgba(255, 255, 255, 0) 80%;
+
+  /* Start with axis defaults. Exclude weight, which is better controlled via the usual font-weight CSS property */
+  --MONO: 0; /* Monospace    */
+  --CASL: 0; /* Casual       */
+  --slnt: 0; /* Upright      */
+  --CRSV: 0.5; /* Auto Cursive */
+
+  font-family: var(--base-font);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  background-color: var(--base-bck);
+  color: var(--base-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*:before,
+*:after {
+  font-variation-settings: 'MONO' var(--MONO), 'CASL' var(--CASL),
+    'slnt' var(--slnt), 'CRSV' var(--CRSV);
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: inherit;
+  cursor: pointer;
+}
+a:hover {
+  color: var(--link-hover-color);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  background: none;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  background: var(--bck-button-color);
+  font-family: var(--base-font);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    --bck-gradient: linear-gradient(
+      rgba(17, 17, 17, 0.45),
+      rgba(0, 0, 0, 0.45)
+    );
+    background: url(../assets/canvas.png);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    --bck-gradient: linear-gradient(
+      rgba(17, 17, 17, 0.45),
+      rgba(0, 0, 0, 0.45)
+    );
+    background: var(--bck-gradient), url(../assets/canvas.png);
+  }
+
+  .ic-javascript::before {
+    content: '\e909';
+    --icon-color: #e0ce4a;
+  }
+}

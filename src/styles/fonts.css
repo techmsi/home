@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'gmsitech';
+  src: url('../fonts/gmsitech.ttf?jnlbig') format('truetype'),
+    url('../fonts/gmsitech.woff?jnlbig') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='ic-'],
+[class*=' ic-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'gmsitech' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^='ic-']::before,
+[class*=' ic-']::before {
+  --icon-color: #111;
+  color: var(--icon-color);
+}
+.ic-drupal::before {
+  content: '\e900';
+}
+.ic-linux::before {
+  content: '\e901';
+}
+.ic-angular::before {
+  content: '\e902';
+  --icon-color: #dd0031;
+}
+.ic-apple::before {
+  content: '\e903';
+  --icon-color: #999;
+}
+.ic-bitbucket::before {
+  content: '\e904';
+  --icon-color: #0052cc;
+}
+.ic-csswizardry::before {
+  content: '\e905';
+  --icon-color: #f43059;
+}
+.ic-github::before {
+  content: '\e906';
+}
+.ic-gulp::before {
+  content: '\e907';
+  --icon-color: #da4648;
+}
+.ic-html5::before {
+  content: '\e908';
+  --icon-color: #e34f26;
+}
+.ic-javascript::before {
+  content: '\e909';
+  --icon-color: #f7df1e;
+}
+.ic-jenkins::before {
+  content: '\e90a';
+  --icon-color: #d24939;
+}
+.ic-node-dot-js::before {
+  content: '\e90b';
+  --icon-color: #393;
+}
+.ic-npm::before {
+  content: '\e90c';
+  --icon-color: #cb3837;
+}
+.ic-php::before {
+  content: '\e90d';
+  --icon-color: #777bb4;
+}
+.ic-python::before {
+  content: '\e90e';
+  --icon-color: #3776ab;
+}
+.ic-react::before {
+  content: '\e90f';
+  --icon-color: #61dafb;
+}
+.ic-sass::before {
+  content: '\e910';
+  --icon-color: #c69;
+}
+.ic-slack::before {
+  content: '\e911';
+  --icon-color: #4a154b;
+}
+.ic-stackoverflow::before {
+  content: '\e912';
+  --icon-color: #fe7a16;
+}
+.ic-vue-dot-js::before {
+  content: '\e913';
+  --icon-color: #4fc08d;
+}
+.ic-wordpress::before {
+  content: '\e914';
+  --icon-color: #21759b;
+}
+.ic-wordpress1::before {
+  content: '\eab4';
+}

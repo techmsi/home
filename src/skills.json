@@ -1,0 +1,33 @@
+{
+  "categories": [
+    { "name": "Vanilla", "on": false },
+    { "name": "Frameworks", "on": false },
+    { "name": "Backend", "on": false },
+    { "name": "Front-end", "on": false },
+    { "name": "Content Management", "on": false },
+    { "name": "Other", "on": false }
+  ],
+  "skills": [
+    { "header": "Vanilla skills: JavaScript", "list": ["ic-javascript"] },
+    {
+      "header": "Frameworks: React, Angular, Vue",
+      "list": ["ic-react", "ic-angular", "ic-vue-dot-js"]
+    },
+    {
+      "header": "Backend: Node, PHP, Python",
+      "list": ["ic-node-dot-js", "ic-php", "ic-python"]
+    },
+    {
+      "header": "Front-end: HTML, SASS, CSS, Gulp",
+      "list": ["ic-html5", "ic-sass", "ic-csswizardry", "ic-gulp"]
+    },
+    {
+      "header": "Content Management: Word press, Drupal",
+      "list": ["ic-wordpress", "ic-drupal"]
+    },
+    {
+      "header": "Other: Slack, Jenkins, Apple, Linux",
+      "list": ["ic-slack", "ic-jenkins", "ic-apple", "ic-linux"]
+    }
+  ]
+}

@@ -1,0 +1,245 @@
+html {
+  font-size: 100%;
+}
+body {
+  font-family: var(--base-font);
+  padding: 2rem;
+  color: var(--base-color);
+  font-size: 1rem;
+}
+
+h2 {
+  --slnt: -10;
+  font-size: var(--heading-font-size);
+}
+
+h3 {
+  font-weight: 100;
+}
+
+h3:hover {
+  font-weight: 800;
+  --slnt: -7;
+  --CRSV: 0;
+}
+
+#root {
+  width: 100%;
+}
+a {
+  font-family: var(--base-font);
+  color: var(--link-color);
+  text-decoration: none;
+  transition: all 200ms ease-in;
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+footer a {
+  color: var(--base-color);
+}
+
+a:hover {
+  color: #f60;
+  text-decoration: underline;
+}
+.page-links a {
+  color: var(--base-color);
+  font-size: var(--base-font-size);
+  border-bottom: 5px solid var(--base-color);
+  margin-inline-end: 1rem;
+}
+
+.page-links a.active {
+  border-color: var(--link-color);
+}
+.links i {
+  font-size: var(--icon-lg-size);
+}
+
+[class^='ic-'] {
+  font-size: var(--icon-size);
+}
+.visuallyHidden {
+  position: absolute;
+  left: -10000px;
+  height: 1px;
+  overflow: hidden;
+}
+.intro {
+  grid-column: 1/-1;
+  min-height: 3rem;
+  margin-top: 1rem;
+}
+.image {
+  aspect-ratio: 16/9;
+  object-fit: contain;
+  width: 60%;
+  z-index: 1;
+}
+.logo {
+  background: url(../assets/logo_sophie.png) center no-repeat;
+  height: 5rem;
+}
+
+nav a:not(.link) {
+  color: var(--link-color);
+  background: linear-gradient(90deg, var(--grad-1), var(--grad-2));
+  padding: 1rem;
+  font-size: var(--link-font-size);
+  font-weight: 100;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 0.5rem;
+}
+
+.links {
+  grid-row: 2;
+  display: flex;
+  justify-content: space-around;
+  z-index: 2;
+}
+
+.links a {
+  text-decoration: none;
+  transform: scale(0.95);
+  transition: all 200ms ease-in;
+}
+
+.links a:hover {
+  transform: scale(1.1);
+}
+.tags {
+  display: grid;
+  gap: 0.5rem;
+  grid-column: 1/-1;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.tag.on {
+  --slnt: -10;
+  --tag-side: var(--base-color);
+  --tag-mix: initial;
+  --tag-size: 1;
+}
+.tag {
+  --tag-side: transparent;
+  --tag-mix: multiply;
+  --tag-size: 0.95;
+
+  background-color: var(--link-color);
+  border-radius: 0.25rem;
+  white-space: nowrap;
+  padding: 0.25rem 1rem;
+  transition: all 200ms ease-in;
+  color: var(--base-color);
+  border-bottom: 3px solid var(--tag-side);
+  mix-blend-mode: var(--tag-mix);
+  transform: scale(var(--tag-size));
+  transition: all 200ms ease-in;
+  isolation: isolate;
+  font-size: var(--base-font-size);
+}
+
+.App {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'pages'
+    'menu'
+    'skills'
+    'footer';
+  gap: 2rem 1rem;
+}
+[data-area='pages'] {
+  grid-area: pages;
+}
+[data-area='image'] {
+  grid-area: image;
+}
+[data-area='menu'] {
+  grid-area: menu;
+}
+
+[data-area='header'] {
+  grid-area: header;
+}
+[data-area='skills'] {
+  grid-area: skills;
+  display: grid;
+  gap: 1rem 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  min-height: 10rem;
+}
+[data-area='footer'] {
+  grid-area: footer;
+}
+[data-area='skills'] h2 {
+  grid-column: 1/-1;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.75);
+  height: 100%;
+  display: grid;
+  column-gap: 0.5rem;
+  place-items: center;
+  padding: 0.25rem 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+  box-shadow: var(--shadow-color) 2px 0 3px;
+  border-radius: 0.25rem;
+  transform: scale(0.96);
+  transition: all 200ms ease-in;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+}
+
+.skill-card h3 {
+  grid-column: 1/3;
+}
+
+@media only screen and (max-width: 768px) {
+  :root {
+    --grad-1: rgba(35, 56, 61, 0.621) 1%;
+    --grad-2: rgba(112, 110, 104, 0.4) 95%;
+    --link-font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) {
+  .image {
+    width: 50%;
+    margin-top: 6rem;
+  }
+}
+
+@media only screen and (min-device-width: 700px) {
+  :root {
+    --link-font-size: 2rem;
+  }
+  .App {
+    grid-template-areas:
+      'header header header'
+      'pages pages pages'
+      'menu menu menu'
+      'skills skills skills'
+      'footer footer footer';
+  }
+
+  [data-area='image'] {
+    grid-area: menu;
+    place-self: end;
+  }
+
+  .image {
+    width: 50%;
+  }
+}

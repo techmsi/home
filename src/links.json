@@ -1,0 +1,31 @@
+{
+  "links": [
+    { "link": "http://gmsitech.com/portfolio/", "label": "Sophie's Portfolio" },
+    { "link": "http://gmsitech.com/gds/", "label": "Game Design Site" },
+    { "link": "http://gmsitech.com/ed/", "label": "Education Blog" },
+    { "link": "http://28dances.com", "label": "Dance Site" },
+    { "link": "http://articles.28dances.com", "label": "Dance Blog" }
+  ],
+  "iconOnlyLinks": [
+    {
+      "link": "https://www.npmjs.com/~techmsi",
+      "label": "View NPM modules",
+      "icon": "ic-npm"
+    },
+    {
+      "link": "https://stackoverflow.com/users/1883272/techmsi",
+      "label": "View Stack Overflow",
+      "icon": "ic-stackoverflow"
+    },
+    {
+      "link": "https://github.com/techmsi",
+      "label": "View Github",
+      "icon": "ic-github"
+    },
+    {
+      "link": "https://bitbucket.org/techmsi/",
+      "label": "View Bitbucket",
+      "icon": "ic-bitbucket"
+    }
+  ]
+}
