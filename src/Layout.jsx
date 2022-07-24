@@ -59,7 +59,11 @@ export const Tag = ({ name, setCategory }) => {
     setCategory({ name, on });
   }, [on]);
   return (
-    <button key={name} className={on ? 'tag on' : 'tag'} onClick={toggle}>
+    <button
+      key={name}
+      className={on ? 'slanted-button tag on' : 'slanted-button tag '}
+      onClick={toggle}
+    >
       {name}
     </button>
   );

@@ -5,6 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import './styles/fonts.css';
 import './styles/index.css';
+import './styles/button.css';
 import './styles/app.css';
 const fixRouting = () => window.location.pathname.replace(/(\/[^/]+)$/, '');
 
